@@ -1,0 +1,36 @@
+	#include<iostream>
+	using namespace std;
+	void inputfunc(int arr[], int size);
+	int largerfunc(int arr[], int size);
+
+	int main()
+	{
+		int arr[7];
+		cout << "Enter 7 numbers: " << endl;
+		inputfunc(arr, 7);
+		cout << "The largerest element is: " << largerfunc(arr, 7) << endl;
+	
+	}
+
+	void inputfunc(int arr[],int size)
+	{
+		for (int i = 0; i < size; i++)
+		{	
+			cin >> arr[i];
+		}
+	}
+
+	int largerfunc(int arr[], int size)
+	{
+		int larg = arr[0];
+		for (int i = 0; i < size; i++)
+		{
+			if (arr[i] >  larg)
+			{
+				larg = arr[i];
+				
+			}
+			
+		}
+		return larg;
+	}
